@@ -73,9 +73,8 @@
         .intro-text .name { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 32px; }
         .intro-interests { color: var(--text-secondary); }
         .project-card { padding: 0; cursor: pointer; display: flex; flex-direction: column; }
-        .project-card .card-img { flex: 1; min-height: 160px; background-size: cover; background-position: center; background-color: #f0f0f0; position: relative; display: flex; align-items: center; justify-content: center; }
+        .project-card .card-img { flex: 1; min-height: 160px; background-size: cover; background-position: center; background-color: #f5f5f5; position: relative; }
         .dark-mode .project-card .card-img { background-color: #1a1a1a; }
-        .project-card .card-img-placeholder { font-size: 48px; opacity: 0.6; }
         .project-card .card-arrow { position: absolute; bottom: 12px; left: 12px; width: 32px; height: 32px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .project-card:hover .card-arrow { opacity: 1; }
         .project-card .card-arrow svg { width: 12px; height: 12px; stroke: #1a1a1a; }
@@ -116,9 +115,9 @@
         .modal-close:hover { background: rgba(0,0,0,0.1); }
         .modal-close svg { width: 18px; height: 18px; stroke: var(--text-secondary); }
         .modal-body { padding: 24px; max-height: calc(85vh - 80px); overflow-y: auto; }
-        .project-hero { border-radius: 16px; overflow: hidden; margin-bottom: 32px; height: 280px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; }
+        .project-hero { border-radius: 16px; overflow: hidden; margin-bottom: 32px; height: 280px; background: #f5f5f5; }
+        .dark-mode .project-hero { background: #1a1a1a; }
         .project-hero img { width: 100%; height: 100%; object-fit: cover; }
-        .project-hero-placeholder { font-size: 72px; }
         .project-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); font-weight: 600; }
         .project-title { font-family: 'Newsreader', Georgia, serif; font-size: 32px; font-weight: 400; margin: 8px 0 20px; line-height: 1.2; }
         .project-intro { font-size: 18px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; }
@@ -136,11 +135,12 @@
         .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
         .project-tag { padding: 6px 14px; background: rgba(0,0,0,0.04); border-radius: 100px; font-size: 12px; color: var(--text-secondary); font-weight: 500; }
         .dark-mode .project-tag { background: rgba(255,255,255,0.08); }
-        .project-links { display: flex; gap: 12px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.06); }
+        .project-links { display: flex; gap: 12px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.06); flex-wrap: wrap; }
         .dark-mode .project-links { border-color: rgba(255,255,255,0.1); }
         .project-link { display: flex; align-items: center; gap: 8px; padding: 12px 20px; background: rgba(0,0,0,0.04); border-radius: 10px; text-decoration: none; color: var(--text-primary); font-size: 14px; font-weight: 500; transition: all 0.2s; }
         .dark-mode .project-link { background: rgba(255,255,255,0.08); }
         .project-link:hover { background: rgba(0,0,0,0.08); }
+        .project-link.primary { background: var(--text-primary); color: var(--bg); }
         .project-link svg { width: 16px; height: 16px; }
         @media (max-width: 900px) { .bento-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .container { padding: 16px; } .nav { flex-direction: column; gap: 16px; } .bento-grid { grid-template-columns: 1fr; } .col-1, .col-2 { grid-column: span 1; } .row-2 { grid-row: span 1; } .intro-text { font-size: 17px; } .intro-text .name { font-size: 26px; } .project-stats { grid-template-columns: 1fr; } }
@@ -158,7 +158,7 @@
                 <button class="nav-pill active" data-filter="all">All</button>
                 <button class="nav-pill" data-filter="about">About</button>
                 <button class="nav-pill" data-filter="projects">Projects</button>
-                <button class="nav-pill" data-filter="builds">Builds</button>
+                <button class="nav-pill" data-filter="case-studies">Case Studies</button>
             </div>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=parthkohli92@gmail.com&su=Hello%20Parth!" target="_blank" class="nav-contact">Contact</a>
         </nav>
@@ -178,7 +178,7 @@
 
             <!-- India First -->
             <div class="bento-card project-card col-1 row-2" data-category="projects" data-project="indiafirst">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_INDIAFIRST.png');"><div class="card-img-placeholder">📞</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-img" style="background-image: url('PLACEHOLDER_INDIAFIRST.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">BFSI</div><div class="card-title">India First Life</div></div>
             </div>
 
@@ -195,25 +195,25 @@
 
             <!-- NEOM -->
             <div class="bento-card project-card col-2" data-category="projects" data-project="neom">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_NEOM.png');"><div class="card-img-placeholder">🏝️</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-img" style="background-image: url('PLACEHOLDER_NEOM.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">Hospitality</div><div class="card-title">NEOM Ultra-Luxury</div></div>
             </div>
 
             <!-- Axis -->
             <div class="bento-card project-card col-1" data-category="projects" data-project="axis">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_AXIS.png');"><div class="card-img-placeholder">🏦</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-img" style="background-image: url('PLACEHOLDER_AXIS.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">BFSI</div><div class="card-title">Axis Bank</div></div>
             </div>
 
             <!-- Reckitt -->
             <div class="bento-card project-card col-1" data-category="projects" data-project="reckitt">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_RECKITT.png');"><div class="card-img-placeholder">🧴</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-img" style="background-image: url('PLACEHOLDER_RECKITT.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">FMCG</div><div class="card-title">Reckitt Benckiser</div></div>
             </div>
 
             <!-- KFC -->
             <div class="bento-card project-card col-1" data-category="projects" data-project="kfc">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_KFC.png');"><div class="card-img-placeholder">🍗</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-img" style="background-image: url('PLACEHOLDER_KFC.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">QSR</div><div class="card-title">KFC Dine-In</div></div>
             </div>
 
@@ -222,23 +222,32 @@
                 <p class="quote-text">"<strong>Great products</strong> start with deep customer empathy."</p>
             </div>
 
+            <!-- Case Studies -->
+            
             <!-- CRED -->
-            <div class="bento-card project-card col-2" data-category="builds" data-project="cred">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_CRED.png');"><div class="card-img-placeholder">💳</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+            <div class="bento-card project-card col-2" data-category="case-studies" data-project="cred">
+                <div class="card-img" style="background-image: url('PLACEHOLDER_CRED.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">Product Design</div><div class="card-title">CRED Advisor</div></div>
             </div>
 
             <!-- Blinkit -->
-            <div class="bento-card project-card col-1" data-category="builds" data-project="blinkit">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_BLINKIT.png');"><div class="card-img-placeholder">🟡</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+            <div class="bento-card project-card col-1" data-category="case-studies" data-project="blinkit">
+                <div class="card-img" style="background-image: url('PLACEHOLDER_BLINKIT.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">CX Teardown</div><div class="card-title">Blinkit</div></div>
             </div>
 
-            <!-- Blueprint -->
-            <div class="bento-card project-card col-1" data-category="builds" data-project="blueprint">
-                <div class="card-img" style="background-image: url('PLACEHOLDER_BLUEPRINT.png');"><div class="card-img-placeholder">🤖</div><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+            <!-- Blueprint AI -->
+            <div class="bento-card project-card col-1" data-category="case-studies" data-project="blueprint">
+                <div class="card-img" style="background-image: url('PLACEHOLDER_BLUEPRINT.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
                 <div class="card-info"><div class="card-label">Shipped Product</div><div class="card-title">Blueprint AI</div></div>
             </div>
+
+            <!-- Phia -->
+            <div class="bento-card project-card col-2" data-category="case-studies" data-project="phia">
+                <div class="card-img" style="background-image: url('PLACEHOLDER_PHIA.png');"><div class="card-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg></div></div>
+                <div class="card-info"><div class="card-label">Product Feature</div><div class="card-title">Phia Virtual Try-On</div></div>
+            </div>
+
         </div>
     </div>
 
@@ -254,99 +263,114 @@
             indiafirst: {
                 label: 'BFSI • Contact Center Transformation',
                 title: 'Turning frustrated callers into loyal customers',
-                emoji: '📞',
+                heroImg: 'PLACEHOLDER_INDIAFIRST.png',
                 intro: "When someone calls their insurance company, they're usually worried. A lapsed policy, a claim question, a payment gone wrong. We asked: what if that moment of anxiety became one of trust?",
-                context: "India First Life's digital sales contact center was bleeding opportunities. Leads were going cold because agents couldn't reach them fast enough. When they did connect, conversations weren't converting. The team was working hard but the system was working against them.",
-                insight: "We discovered the problem wasn't effort—it was timing and structure. Leads had a \"golden window\" of responsiveness that was being missed. Agents were flying blind without real-time performance data. And the coaching was generic, not personalized to what each agent actually needed.",
+                context: "India First Life's digital sales contact center was bleeding opportunities. Leads were going cold because agents couldn't reach them fast enough. When they did connect, conversations weren't converting.",
+                insight: "We discovered the problem wasn't effort—it was timing and structure. Leads had a \"golden window\" of responsiveness that was being missed. Agents were flying blind without real-time performance data.",
                 approach: ['Mapped the entire lead lifecycle from creation to closure, identifying where leads were dying', 'Built a forecasting and capacity model that matched agent availability to lead volume by the hour', 'Designed real-time dashboards tracking speed-to-first-response, follow-up compliance, and hourly productivity', 'Created a performance framework that identified exactly where each agent needed coaching'],
                 stats: [{ value: '126%', label: 'APE Growth' }, { value: '77%', label: 'Faster Response' }, { value: '3x', label: 'Conversion Rate' }],
-                learning: "Contact centers aren't just cost centers—they're revenue engines waiting to be optimized. The difference between a good and great contact center isn't more agents, it's smarter systems.",
+                learning: "Contact centers aren't just cost centers—they're revenue engines waiting to be optimized.",
                 tags: ['Contact Center', 'WFM', 'Performance Analytics', 'Sales Enablement']
             },
             neom: {
                 label: 'Hospitality • Destination Strategy',
                 title: "Designing luxury that doesn't exist yet",
-                emoji: '🏝️',
+                heroImg: 'PLACEHOLDER_NEOM.png',
                 intro: "How do you create hospitality experiences for a city that hasn't been built? For guests who don't exist yet? That was the brief for NEOM—Saudi Arabia's $500 billion future.",
-                context: "NEOM is building Shushah Island, a destination focused on human performance and wellness for ultra-high-net-worth guests. We were brought in to design the end-to-end guest journey—from the moment they land at NEOM Bay Airport to when they leave the island transformed.",
-                insight: "Ultra-luxury isn't about more amenities. It's about invisible friction. The best experiences feel effortless because someone obsessed over every transition, every handoff, every \"what if.\" Our job was to anticipate needs guests didn't know they had.",
-                approach: ['Conducted 30+ stakeholder interviews across Tourism, Hospitality, Sport, and Environment sectors', 'Benchmarked 150+ global luxury destinations to identify what separates good from unforgettable', 'Created detailed guest personas for high-performance seekers, corporate retreats, and wellness travelers', 'Mapped journeys across 4 critical touchpoints: Airport, Marina, Island Welcome, and Accommodation'],
+                context: "NEOM is building Shushah Island, a destination focused on human performance and wellness for ultra-high-net-worth guests. We were brought in to design the end-to-end guest journey.",
+                insight: "Ultra-luxury isn't about more amenities. It's about invisible friction. The best experiences feel effortless because someone obsessed over every transition.",
+                approach: ['Conducted 30+ stakeholder interviews across Tourism, Hospitality, Sport, and Environment sectors', 'Benchmarked 150+ global luxury destinations', 'Created detailed guest personas for high-performance seekers', 'Mapped journeys across 4 critical touchpoints: Airport, Marina, Island Welcome, and Accommodation'],
                 stats: [{ value: '4', label: 'Touchpoints Designed' }, { value: '30+', label: 'Stakeholder Interviews' }, { value: '150+', label: 'Destinations Benchmarked' }],
-                learning: "Designing for the future requires imagination grounded in human truth. Technology will change, but the desire to feel welcomed, understood, and transformed won't.",
+                learning: "Designing for the future requires imagination grounded in human truth.",
                 tags: ['Service Design', 'Journey Mapping', 'Personas', 'Ultra-Luxury']
             },
             axis: {
                 label: 'BFSI • Conversational AI',
                 title: '200 journeys. One seamless experience.',
-                emoji: '🏦',
+                heroImg: 'PLACEHOLDER_AXIS.png',
                 intro: "When Axis Bank wanted to modernize how customers interact with their services, they didn't just want a chatbot. They wanted conversations that actually solve problems.",
-                context: "We designed 200+ conversational AI journeys across the bank's digital channels—covering everything from account queries to transaction disputes. The challenge: making banking feel human while being entirely automated.",
-                insight: "The best chatbots don't feel like chatbots. They anticipate, they remember context, and they know when to escalate. We designed for the 95% of queries that could be automated, but obsessed over the handoff for the 5% that couldn't.",
-                approach: ['Blueprinted 200+ customer journeys with stakeholders from business, IT, and operations', 'Designed conversation flows that handle Hinglish and context switching', 'Built escalation logic that preserves conversation history when transferring to humans', 'Created BRDs and Whimsical flows for engineering handoff'],
+                context: "We designed 200+ conversational AI journeys across the bank's digital channels—covering everything from account queries to transaction disputes.",
+                insight: "The best chatbots don't feel like chatbots. They anticipate, they remember context, and they know when to escalate.",
+                approach: ['Blueprinted 200+ customer journeys with stakeholders from business, IT, and operations', 'Designed conversation flows that handle Hinglish and context switching', 'Built escalation logic that preserves conversation history', 'Created BRDs and Whimsical flows for engineering handoff'],
                 stats: [{ value: '200+', label: 'Journeys Designed' }, { value: '8', label: 'Regions Covered' }, { value: '40%', label: 'Resolution Time Cut' }],
-                learning: "Conversational AI isn't about replacing humans—it's about freeing them to do what only humans can do: empathize, negotiate, and build relationships.",
+                learning: "Conversational AI isn't about replacing humans—it's about freeing them to do what only humans can do.",
                 tags: ['Conversational AI', 'Journey Design', 'BRD', 'GenAI', 'Banking']
             },
             reckitt: {
                 label: 'FMCG • Employee Experience',
                 title: 'When 40,000 employees have questions',
-                emoji: '🧴',
-                intro: "Reckitt's HR team was drowning. With 40,000+ employees globally, routine queries about policies, benefits, and processes were consuming hours that should go to strategic work.",
-                context: "We designed and deployed a ServiceNow-backed conversational AI assistant that handles employee queries automatically—from leave policies to IT tickets—across 8 regions.",
-                insight: "Employee experience is just CX turned inward. The same principles apply: reduce friction, anticipate needs, and know when automation isn't enough.",
+                heroImg: 'PLACEHOLDER_RECKITT.png',
+                intro: "Reckitt's HR team was drowning. With 40,000+ employees globally, routine queries about policies were consuming hours that should go to strategic work.",
+                context: "We designed and deployed a ServiceNow-backed conversational AI assistant that handles employee queries automatically across 8 regions.",
+                insight: "Employee experience is just CX turned inward. The same principles apply: reduce friction, anticipate needs.",
                 approach: ['Ran knowledge transfer workshops with HR, Talent, and IT teams', 'Defined ticket taxonomy and routing logic for 50+ query categories', 'Built an enterprise knowledge base from scattered policy documents', 'Designed the conversational UX for multi-language support'],
                 stats: [{ value: '8', label: 'Regions Live' }, { value: '40%', label: 'Resolution Faster' }, { value: '15%', label: 'Agent Load Reduced' }],
-                learning: "The best employee tools are invisible. People shouldn't have to think about how to find information—they should just find it.",
+                learning: "The best employee tools are invisible. People shouldn't have to think about how to find information.",
                 tags: ['Employee Experience', 'ServiceNow', 'Knowledge Management', 'HR Tech']
             },
             kfc: {
                 label: 'QSR • Experience Transformation',
                 title: "Why fast food doesn't have to feel rushed",
-                emoji: '🍗',
-                intro: "KFC India was watching footfall decline. People were ordering delivery instead of dining in. We went to 25 cities to find out why—and what could bring them back.",
-                context: "This wasn't a desk research project. We visited 40+ outlets, conducted mystery shopping, interviewed staff, surveyed 500+ consumers, and benchmarked competitors obsessively.",
-                insight: "The dine-in experience had become an afterthought. Lighting felt harsh, seating was cramped, and the brand that built itself on \"finger lickin' good\" had stopped caring about the full sensory experience.",
+                heroImg: 'PLACEHOLDER_KFC.png',
+                intro: "KFC India was watching footfall decline. People were ordering delivery instead of dining in. We went to 25 cities to find out why.",
+                context: "This wasn't a desk research project. We visited 40+ outlets, conducted mystery shopping, interviewed staff, surveyed 500+ consumers.",
+                insight: "The dine-in experience had become an afterthought. Lighting felt harsh, seating was cramped, and the brand had stopped caring about the full sensory experience.",
                 approach: ['Conducted ethnographic research across 25 cities with on-ground staff interviews', 'Mystery shopped 40+ outlets scoring ambience, service, food quality, and hygiene', 'Surveyed 500+ consumers on Gen Z and millennial dining preferences', 'Benchmarked global QSR innovations and local competitor differentiators'],
                 stats: [{ value: '25', label: 'Cities Visited' }, { value: '500+', label: 'Survey Responses' }, { value: '40+', label: 'Outlets Audited' }],
-                learning: "Speed and experience aren't trade-offs. The best QSR brands are fast AND memorable. KFC just needed to remember what made them special.",
+                learning: "Speed and experience aren't trade-offs. The best QSR brands are fast AND memorable.",
                 tags: ['Consumer Research', 'Mystery Shopping', 'Experience Design', 'QSR']
             },
             cred: {
                 label: 'Product Design • 0→1',
-                title: 'Your AI money companion that actually gets India',
-                emoji: '💳',
-                intro: "Indians make 200+ UPI transactions a month but have no way to understand their spending through conversation. CRED has all the data. We designed the assistant that makes sense of it.",
-                context: "Cleo proved AI financial assistants work in the West. But India's financial context is different—UPI dominates, credit card rewards are complex, and Hinglish is how people actually talk about money.",
-                insight: "The gap isn't data or technology. CRED already has Account Aggregator integration. The gap is interaction design—turning a dashboard into a conversation.",
-                approach: ['Researched global benchmarks: Cleo, Starling, Revolut\'s AI approaches', 'Defined 3 user personas with distinct financial behaviors and communication preferences', 'Designed feature layers: conversational queries → proactive insights → personalized guidance', 'Created high-fidelity mockups with India-specific touches (Hinglish, desi roast mode, credit card rewards optimizer)'],
-                stats: [{ value: '4', label: 'Feature Layers' }, { value: '3', label: 'User Personas' }, { value: '∞', label: 'Roast Potential' }],
-                learning: "Great fintech products don't just show you data. They help you understand it, act on it, and occasionally roast you for that ₹800 butter chicken order.",
-                tags: ['0→1 Design', 'User Research', 'Wireframing', 'Fintech', 'AI'],
-                figmaUrl: 'FIGMA_LINK_HERE'
+                title: 'What if your money could talk back?',
+                heroImg: 'PLACEHOLDER_CRED.png',
+                intro: "I was staring at my bank statement one night—200+ UPI transactions, random debits, subscriptions I forgot existed. I thought: why can't I just ask my phone \"kitna udaya maine is mahine?\" and get a straight answer?",
+                context: "Indians are transacting more than ever. 13 billion UPI transactions a month. But our tools for understanding that spending? Static dashboards. Category pie charts. There's no way to have a conversation with your money.",
+                insight: "The data already exists. Every fintech app has it. The gap isn't information—it's interaction. What if instead of browsing charts, you could text your finances like you'd text a friend?",
+                approach: ['Interviewed 12 friends about how they track spending (spoiler: most don\'t)', 'Mapped how UPI transaction data flows—what\'s captured, what\'s categorizable', 'Designed a conversational interface that handles natural queries', 'Built proactive insights layer—alerts before you overspend, subscription detection', 'Created personality modes: Professional, Supportive, and Desi Roast'],
+                stats: [{ value: '12', label: 'User Interviews' }, { value: '4', label: 'Feature Layers' }, { value: '3', label: 'Personality Modes' }],
+                learning: "The best fintech products don't just show you data—they help you understand it, act on it, and build better habits.",
+                tags: ['0→1 Design', 'User Research', 'Conversational UX', 'Fintech', 'AI'],
+                links: [{ label: 'View Figma Prototype', url: '#', icon: 'figma' }]
             },
             blinkit: {
                 label: 'CX Teardown • Product Improvement',
-                title: 'From bot loop hell to trust-based resolution',
-                emoji: '🟡',
-                intro: "Blinkit customers with issues are trapped in a frustrating chatbot loop with no clear path to human resolution. We tore it apart and redesigned it.",
-                context: "Quick commerce is brutal on trust. One bad delivery—wrong item, expired product, missing order—and customers switch to Zepto. Blinkit's support experience was making things worse, not better.",
-                insight: "The support flow was designed to deflect, not resolve. Customers were bounced between bot responses with no way to escalate. The refund policy pushed coupons instead of refunds, trapping users in a cycle that felt adversarial.",
-                approach: ['Mystery shopped the support experience across 15+ issue types', 'Mapped the current flow identifying 8+ friction points', 'Designed a trust-based tiering system that rewards good customers with faster resolution', 'Created a transparency contract that sets expectations upfront'],
-                stats: [{ value: '2.5→4.2', label: 'CSAT Target' }, { value: '10→2 min', label: 'Resolution Time' }, { value: '8+', label: 'Friction Points Found' }],
-                learning: "Customer support isn't a cost center—it's the last chance to save a relationship. The best support experiences feel like the company is on your side, not protecting itself from you.",
-                tags: ['Product Teardown', 'CX Design', 'Support Systems', 'Quick Commerce']
+                title: 'The support experience that made me switch apps',
+                heroImg: 'PLACEHOLDER_BLINKIT.png',
+                intro: "Ordered groceries. Got expired milk. Tried to get help. Spent 20 minutes in a chatbot loop that kept closing my conversation \"due to inactivity.\" That frustration became a full product teardown.",
+                context: "Quick commerce lives and dies on trust. One bad delivery and customers bounce to a competitor. But the support experience was designed to deflect, not resolve.",
+                insight: "The support flow optimized for the wrong metric. It minimized tickets closed instead of maximizing trust preserved.",
+                approach: ['Mystery shopped the support experience across 15+ issue types', 'Mapped the complete user journey from issue discovery to resolution', 'Identified 8+ friction points where users got stuck', 'Designed a trust-based tiering system—loyal customers get faster resolution', 'Created a transparency contract that sets expectations upfront'],
+                stats: [{ value: '15+', label: 'Issue Types Tested' }, { value: '8+', label: 'Friction Points Found' }, { value: '2.5→4.2', label: 'CSAT Target' }],
+                learning: "Customer support isn't a cost center—it's the last chance to save a relationship.",
+                tags: ['Product Teardown', 'CX Design', 'Support Systems', 'Quick Commerce'],
+                links: [{ label: 'Full Teardown on Notion', url: 'https://military-bugle-4e9.notion.site/Blinkit-Customer-Support-Teardown-30552fee3539809fbebdf480f17168f6', icon: 'notion' }]
             },
             blueprint: {
-                label: 'Shipped Product • AI Tool',
-                title: 'From messy meetings to clean flows in minutes',
-                emoji: '🤖',
-                intro: "After designing 200+ conversational AI journeys, I realized 80% of the work was the same: extract intents from messy transcripts, create flows, write BRDs. So I automated it.",
-                context: "Blueprinting sessions at consulting firms are chaotic—multiple stakeholders, Hinglish conversations, decisions buried in tangents. Turning those into structured deliverables took hours. Blueprint AI does it in minutes.",
-                insight: "The problem wasn't transcription—it was pattern extraction. What are the user intents? What are the decision points? What are the API dependencies? These patterns repeat across every project.",
-                approach: ['Built a transcript parser that handles Hinglish and messy meeting audio', 'Designed clarifying question flows to handle ambiguity', 'Created Mermaid flowchart generation for visual outputs', 'Integrated BRD template generation with customizable formats'],
-                stats: [{ value: '6→1 hr', label: 'Time Saved' }, { value: '200+', label: 'Journeys Informed Design' }, { value: '1', label: 'Shipped Product' }],
-                learning: "The best internal tools come from frustration. If you're doing the same thing repeatedly, automate it. If you can't find a tool that does it, build one.",
-                tags: ['AI/ML', 'Internal Tools', 'Automation', 'Shipped Product']
+                label: 'Shipped Product • Internal Tool',
+                title: 'I got tired of doing the same work 200 times',
+                heroImg: 'PLACEHOLDER_BLUEPRINT.png',
+                intro: "After my 50th blueprinting session—transcribing messy meetings into structured flows and BRDs—I realized I was a very expensive copy-paste machine. So I built the tool I wished existed.",
+                context: "Consulting runs on blueprinting sessions. You get 8 stakeholders in a room for 6 hours, map out a customer journey, then spend another 6 hours turning that chaos into Whimsical diagrams and Word documents. Multiply that by 200+ journeys.",
+                insight: "80% of the work was identical across every session. Extract the user intent. Identify decision points. Map the happy path. Note the edge cases. The patterns were the same—only the content changed.",
+                approach: ['Analyzed 50+ of my own blueprinting outputs to identify the repeating structure', 'Built a transcript parser that handles real meeting chaos—Hinglish, interruptions, tangents', 'Designed clarifying question flows for when the transcript is ambiguous', 'Created Mermaid flowchart generation that produces clean, editable diagrams', 'Built BRD template generation with customizable sections'],
+                stats: [{ value: '6→1 hr', label: 'Time Per Journey' }, { value: '200+', label: 'Journeys Informed Design' }, { value: '50+', label: 'Transcripts Analyzed' }],
+                learning: "The best internal tools come from frustration. If you're doing something repeatedly and it feels like a waste of your brain, automate it.",
+                tags: ['AI/ML', 'Internal Tools', 'Automation', 'Shipped Product', 'Consulting'],
+                links: [{ label: 'Try Blueprint AI', url: 'https://parthkohli92.github.io/BlueprintAI/', icon: 'link', primary: true }]
+            },
+            phia: {
+                label: 'Product Feature • Virtual Try-On',
+                title: '"Imagine Me In This" — Removing purchase hesitation',
+                heroImg: 'PLACEHOLDER_PHIA.png',
+                intro: "Phia does a phenomenal job helping users find options. Yet many users still hesitate at the decision stage. The problem isn't discovery. It's decision confidence.",
+                context: "Fashion decisions aren't purely rational. They're emotional, identity-driven, and deeply personal. When users can't visualize themselves in an outfit, decision slows down, hesitation increases, and trust doesn't fully form. 40% of online fashion purchases are returned because they don't look as expected.",
+                insight: "Users think: \"I like it on the model… but I can't tell if it'll look good on me.\" What if we could add a simple button—\"How will I look in this\"—that lets users upload a photo and see themselves wearing the exact item? Price intelligence + visual confidence = complete shopping decision.",
+                approach: ['Identified where hesitation appears in high-intent browsing flows', 'Designed a lightweight virtual try-on feature that fits inside the existing UX', 'Mapped the user journey: upload photo at onboarding → browse products → tap \"Try it on\" → AI generates visualization', 'Created a 30-60-90 day roadmap for MVP, A/B testing, and iteration'],
+                stats: [{ value: '60-70%', label: 'Cart Abandonment Rate' }, { value: '40%', label: 'Returns Due to Fit' }, { value: '12-18mo', label: 'Market Window' }],
+                learning: "The best product features resolve the last unanswered question in the user's journey. For fashion, that question is: \"Will this look good on ME?\"",
+                tags: ['Product Strategy', 'AI/ML', 'Fashion Tech', 'Virtual Try-On', 'User Research'],
+                links: [{ label: 'View Full POV Deck', url: 'phia-deck.pdf', icon: 'deck' }]
             }
         };
 
@@ -370,14 +394,27 @@
             });
         });
 
+        const icons = {
+            figma: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5.5 2C4.12 2 3 3.12 3 4.5v3C3 8.88 4.12 10 5.5 10H8V4.5C8 3.12 6.88 2 5.5 2zM8 10H5.5C4.12 10 3 11.12 3 12.5s1.12 2.5 2.5 2.5H8v-5zm0 5H5.5C4.12 15 3 16.12 3 17.5S4.12 20 5.5 20c1.38 0 2.5-1.12 2.5-2.5V15zm0-13v5h2.5C11.88 7 13 5.88 13 4.5S11.88 2 10.5 2H8z"/></svg>',
+            notion: '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 2.03c-.42-.326-.98-.7-2.055-.607L3.01 2.87c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.886l-15.177.887c-.56.047-.747.327-.747.933z"/></svg>',
+            deck: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
+            link: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>'
+        };
+
         function openProjectModal(id) {
             const p = projects[id];
             if (!p) return;
             document.getElementById('modalTitle').textContent = p.title;
+            
             let statsHtml = p.stats?.length ? `<div class="project-stats">${p.stats.map(s => `<div class="stat-item"><div class="stat-value">${s.value}</div><div class="stat-label">${s.label}</div></div>`).join('')}</div>` : '';
-            let linksHtml = p.figmaUrl ? `<div class="project-links"><a href="${p.figmaUrl}" target="_blank" class="project-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 2C4.12 2 3 3.12 3 4.5v3C3 8.88 4.12 10 5.5 10H8V4.5C8 3.12 6.88 2 5.5 2z"/></svg>View in Figma</a></div>` : '';
+            
+            let linksHtml = '';
+            if (p.links?.length) {
+                linksHtml = `<div class="project-links">${p.links.map(l => `<a href="${l.url}" target="_blank" class="project-link${l.primary ? ' primary' : ''}">${icons[l.icon] || ''}${l.label}</a>`).join('')}</div>`;
+            }
+            
             document.getElementById('modalBody').innerHTML = `
-                <div class="project-hero"><div class="project-hero-placeholder">${p.emoji}</div></div>
+                <div class="project-hero"><img src="${p.heroImg}" alt="${p.title}" onerror="this.style.display='none'"></div>
                 <div class="project-label">${p.label}</div>
                 <h2 class="project-title">${p.title}</h2>
                 <p class="project-intro">${p.intro}</p>
